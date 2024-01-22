@@ -18,7 +18,11 @@ app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap5(app)
 
 
-
+class Base(DeclarativeBase):
+    pass
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///information.db'
+db = SQLAlchemy(model_class=Base)
+db.init_app(app)
 ckeditor = CKEditor(app)
 
 
@@ -47,7 +51,8 @@ ckeditor = CKEditor(app)
 #     body = CKEditorField('Body')
 #     submit = SubmitField('Submit')
 
-
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def about2():
