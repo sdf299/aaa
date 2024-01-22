@@ -14,6 +14,7 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+ckeditor = CKEditor(app)
 Bootstrap5(app)
 
 
@@ -24,32 +25,8 @@ class Base(DeclarativeBase):
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///volunteer.db")
 db = SQLAlchemy()
 db.init_app(app)
-ckeditor = CKEditor(app)
-
-# class Donation(FlaskForm):
-#     Email = StringField('Email')
-#     Name = StringField('Name')
-#     Amount = IntegerField('Amount', validators=[
-#         InputRequired(),
-#         NumberRange(min=0, message='Value must be between 0 and 100')])
-#     feedback = CKEditorField('Any Feedback?')
 
 
-# class Donor(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     email = db.Column(db.String(100), unique=True, index=True)
-#     name = db.Column(db.String(100), index=True)
-#     donated = db.Column(db.Integer, nullable=False)
-#     feedback = db.Column(db.String(250))
-#     method = db.Column(db.String,nullable=False)
-
-# class PostForm(FlaskForm):
-#     title = StringField('Blog Post Title')
-#     subtitle = StringField('Subtitle')
-#     author = StringField('Author')
-#     img_url = URLField('Img_url')
-#     body = CKEditorField('Body')
-#     submit = SubmitField('Submit')
 
 with app.app_context():
     db.create_all()
