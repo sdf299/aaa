@@ -1,0 +1,112 @@
+{% include "header.html" %}
+{% include "nav_bar.html" %}
+<!-- Page Header-->
+
+<header
+  class="masthead"
+  style="background-image: url('https://globalfundforchildren.org/wp-content/uploads/2017/10/img1.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>VỀ CHÚNG TÔI</h1>
+          <span class="subheading">This is what we do.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="./static/assets/img/sccv_icon.jpg" alt="" width="200" height="200">
+    <h1 class="display-5 fw-bold " style="color:#508D69">Về chúng tôi</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Ra đời vào tháng 5 năm 2022, dưới sự bảo trợ pháp lý của Quỹ Học Bổng
+Huỳnh Tấn Phát. Sân Chơi Cầu Vồng là tổ chức xã hội kiến tạo không gian
+chơi đầu tiên và duy nhất tại Việt Nam dựa trên nguyên tắc lấy trẻ em
+làm trung tâm, mọi chất liệu của dự án đều đặt ưu tiên cho sự phát triển
+an toàn - sáng tạo của trẻ; đồng thời nhấn mạnh yếu tố tự nhiên và môi
+trường sống bản địa.</p>
+        <br>
+        <p>Sau 1 năm hoạt động, dự án đã thành công xây dựng 4 Không gian chơi
+dành cho hơn 600 trẻ em khó khăn/yếu thế tại khu vực Tây Nguyên, với
+sự góp sức của hơn 100 tình nguyện viên và hỗ trợ nhiệt thành từ địa
+phương, cộng đồng và quý đối tác.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{{url_for('web')}}"><button type="button" class="btn btn-success btn-lg px-4 gap-3">Our project</button></a>
+          <a href="{{url_for('contact')}}"><button type="button" class="btn btn-outline-info btn-lg px-4">Contact us</button></a>
+      </div>
+    </div>
+  </div>
+
+<div class="b-example-divider"></div>
+
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-11 col-sm-9 col-lg-7">
+        <img src="../static/assets/img/img.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="1000" height="600" loading="lazy">
+      </div>
+      <div class="col-lg-5">
+        <h1 class="display-5 fw-bold lh-1 mb-3"  style="color:#0766AD" >MỤC TIÊU</h1>
+          <h2 style="color:#508D69">Ngắn hạn:</h2>
+          <ul>
+              <li class="lead"> Đến năm 2025, kiến tạo thành công 10 Không gian chơi an toàn -
+sáng tạo cho trẻ em tại khu vực Tây Nguyên.</li>
+              </ul>
+          <h2 style="color:#508D69">Dài hạn:</h2>
+          <ul>
+              <li class="lead"> Kiến tạo sân chơi an toàn cho toàn trẻ thụ hưởng trong trên phạm
+vi toàn quốc.</li>
+              <li class="lead"> Thiết lập hệ tiêu chuẩn về thiết kế không gian chơi an toàn - sáng
+tạo tại Việt Nam.</li>
+              <li class="lead"> Xây dựng mạng lưới tổ chức, cá nhân chuyên về lĩnh vực thiết kế
+sân chơi trẻ em.</li>
+              <li class="lead"> Thay đổi tư duy cộng đồng về tầm quan trọng của sự chơi đối với sự
+phát triển chung của mỗi người.</li>
+
+              </ul>
+      </div>
+    </div>
+</div>
+
+<div class="b-example-divider"></div>
+
+
+
+<div class="copy1" style="background-color:#F4F6F4">
+    <div id="home-work" class="scale-background">
+        <h2 class="subtitle subtitle-center subtitle-black">Where We Work</h2>
+        <hr>
+            <div class="fact-container">
+                <div class="row">
+                    <div class="col">
+                    <div class="fact">
+                    <div class="upper-fact">
+                        <div class="fact-num">332</div>
+                    <div class="fact-title">Local Partners</div>
+                </div>
+            <div class="fact-desc">
+        <p> Resilient. Bold. Dedicated. Led by innovative local leaders, our partner organizations provide life-changing programs that directly impact the children and youth in their communities. </p>
+            </div>
+        </div>
+        </div>
+                <div class="col">
+                <div class="fact">
+                    <div class="upper-fact">
+                        <div class="fact-num" style="size:">42</div>
+                                <div class="fact-title">Countries</div>
+                        </div>
+                <div class="fact-desc">
+                        <p>From Bangladesh to Kyrgyzstan to South Africa, we go the extra mile to find developing programs that will thrive with our support. </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                </div>
+        </div>
+        </div>
+    <a href="https://globalfundforchildren.org/our-partners/where-we-work/">Meet Our Partners</a>
+    </div>
+</div>
+{% include "footer.html" %}
