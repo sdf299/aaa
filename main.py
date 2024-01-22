@@ -12,7 +12,6 @@ from flask_login import UserMixin, login_user, LoginManager, current_user, logou
 from wtforms.validators import InputRequired, NumberRange
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap5(app)
@@ -20,11 +19,12 @@ Bootstrap5(app)
 
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///information.db'
-db = SQLAlchemy(model_class=Base)
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///information.db")
+db = SQLAlchemy()
 db.init_app(app)
 ckeditor = CKEditor(app)
-
 
 # class Donation(FlaskForm):
 #     Email = StringField('Email')
@@ -53,6 +53,7 @@ ckeditor = CKEditor(app)
 
 with app.app_context():
     db.create_all()
+
 
 @app.route('/')
 def about2():
