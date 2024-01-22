@@ -22,7 +22,7 @@ class Base(DeclarativeBase):
     pass
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///volunteer.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///information.db'
 db = SQLAlchemy()
 db.init_app(app)
 
