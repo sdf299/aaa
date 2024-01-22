@@ -92,8 +92,8 @@ def contact():
     return render_template("contact.html", msg_sent=False)
 
 
-MAIL_ADDRESS = 'bao.nguyenquoc05@truongvietanh.com'
-MAIL_APP_PW = 'oqqw tpuz icvx fzkq'
+MAIL_ADDRESS = os.environ.get("MAIL_ADDRESS")
+MAIL_APP_PW = os.environ.get("MAIL_APP_PW")
 TO_MAIL = 'quocbao0905461606@gmail.com'
 
 
