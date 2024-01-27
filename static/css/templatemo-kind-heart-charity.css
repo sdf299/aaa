@@ -1045,20 +1045,20 @@ blockquote::before {
 
 #testimonial-carousel .carousel-indicators li,
 #testimonial-carousel .carousel-indicators li::before {
-  width: 45px;
-  height: 45px; 
+  width: 80px;
+  height: 80px;
 }
 
 #testimonial-carousel .carousel-indicators .avatar-image {
-  width: 45px;
-  height: 45px; 
+  width: 80px;
+  height: 80px;
 }
 
 #testimonial-carousel .carousel-indicators .active,
 #testimonial-carousel .carousel-indicators .active .avatar-image {
   background: transparent;
-  width: 50px; 
-  height: 50px;
+  width: 90px;
+  height: 90px;
 }
 
 

@@ -26,8 +26,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///information.db'
 db = SQLAlchemy()
 db.init_app(app)
 
-
-
 with app.app_context():
     db.create_all()
 
@@ -37,9 +35,9 @@ def about2():
     return render_template('about_2.html')
 
 
-@app.route('/web')
-def web():
-    return render_template('web.html')
+@app.route('/journal')
+def journal():
+    return render_template('journal.html')
 
 
 @app.route('/donate', methods=["GET", "POST"])
@@ -92,15 +90,14 @@ def send_email(name, email, phone, message):
         )
 
 
-@app.route('/colab')
-def colab():
-    return render_template('colab.html')
-
-
-@app.route('/index')
+@app.route('/index', methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        data = request.form
+        send_email(data["volunteer-name"], data["volunteer-email"], data["volunteer-phone"], data["volunteer-subject"])
+        return render_template("contact.html", msg_sent=True)
     return render_template('index.html')
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
