@@ -9,7 +9,6 @@ from datetime import date
 import smtplib
 import os
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
-from wtforms.validators import InputRequired, NumberRange
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 
 app = Flask(__name__)
@@ -33,6 +32,10 @@ with app.app_context():
 @app.route('/')
 def about2():
     return render_template('about_2.html')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
 
 @app.route('/journal')
@@ -90,7 +93,7 @@ def send_email(name, email, phone, message):
         )
 
 
-@app.route('/index', methods=["GET", "POST"])
+@app.route('/about-us', methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         data = request.form
@@ -99,5 +102,27 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/confirm', methods=["GET", "POST"])
+def confirm():
+    if request.method == "POST":
+        with open('customer.txt', 'a', encoding='utf-8') as file:
+            user_amount = request.form.get('flexRadioDefault')
+            user_payment = request.form.get('DonationPayment')
+            user_feedback = request.form.get('feedback')
+            user_name = request.form.get('donation-name')
+            user_email = request.form.get('donation-email')
+            new_infor = [
+                user_email,
+                user_name,
+                user_amount,
+                user_feedback,
+                user_payment
+            ]
+            # file.write(f'{new_infor}\n')
+        # db.session.add(new_infor)
+        # db.session.commit()
+        return render_template('confirm.html',new_infor=new_infor)
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
