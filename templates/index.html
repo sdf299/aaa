@@ -222,7 +222,7 @@ không gian chơi cho hơn 600 trẻ em thuộc 4 điểm trường mầm non, t
                                         <div class="d-flex">
                                             <span class="counter-number" data-from="1" data-to="203"
                                                 data-speed="1000"></span>
-                                            <span class="counter-number-text">M</span>
+                                            <span class="counter-number-text">Tr</span>
                                         </div>
 
 
@@ -279,73 +279,14 @@ niềm vui lên nhiều lần.”</p>
             </div>
         </section>
 
-        <section class="cta-section section-padding section-bg">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-
-                    <div class="col-lg-5 col-12 ms-auto">
-                        <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
-                    </div>
-
-                    <div class="col-lg-5 col-12">
-                        <a href="{{url_for('donate')}}" class="me-4">Make a donation</a>
-
-                        <a href="{{url_for('contact')}}" class="custom-btn btn smoothscroll">Become a volunteer</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
 
 
 
-        <section class="volunteer-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-12 col-12">
-                        <h2 class="text-white mb-4">Volunteer</h2>
 
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="{{url_for('donate')}}" method="post" role="form">
-                            <h3 class="mb-4">Become a volunteer today</h3>
 
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                        placeholder="Jack Doe" required>
-                                </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <input type="email" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
-                                        class="form-control" placeholder="Subject" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                        <input type="text" name="volunteer-phone" id="volunteer-phone"
-                                        class="form-control" placeholder="Phone number" required>
-                                </div>
-                            </div>
-
-                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
-                                placeholder="Comment (Optional)"></textarea>
-
-                            <button type="submit" class="form-control">Submit</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="news-section section-padding" id="section_5">
-        </section>
 
 
         <section class="testimonial-section section-padding section-bg">
@@ -419,10 +360,9 @@ niềm vui lên nhiều lần.”</p>
                                 </div>
 
 
-
                                 <ol class="carousel-indicators">
                                     <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                        <img src="../static/assets/images/avatar/founder_1.png"
+                                            <img src="../static/assets/images/avatar/founder_1.png"
                                             class="img-fluid rounded-circle avatar-image" alt="avatar">
                                     </li>
 
@@ -467,6 +407,83 @@ niềm vui lên nhiều lần.”</p>
         </section>
 
 
+
+        <section class="news-section section-padding" id="section_5">
+            <div class="container">
+                <div class="mb-5 mb-lg-0">
+                    <h2 style="text-align:center text-color:#5BC1AC">TÌNH NGUYỆN VIÊN CỦA DỰ ÁN QUA CÁC MÙA</h2>
+                    <img src="../static/assets/images/TNV_cac_mua/s1.png" style="display: block; margin-left: auto;margin-right: auto;width: 100%;">
+                    <br>
+                    <img src="../static/assets/images/TNV_cac_mua/s2.png" style="display: block; margin-left: auto;margin-right: auto;width: 100%;">
+                    <br>
+                    <img src="../static/assets/images/TNV_cac_mua/s3.png" style="display: block; margin-left: auto;margin-right: auto;width: 100%;">
+                    <br>
+                    <img src="../static/assets/images/TNV_cac_mua/s4.png" style="display: block; margin-left: auto;margin-right: auto;width: 70%;">
+
+                </div>
+            </div>
+        </section>
+
+         <section class="cta-section section-padding section-bg">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+
+                    <div class="col-lg-5 col-12 ms-auto">
+                        <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <a href="{{url_for('donate')}}" class="me-4">Make a donation</a>
+
+                        <a href="{{url_for('contact')}}" class="custom-btn btn smoothscroll">Become a volunteer</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="volunteer-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12">
+                        <h2 class="text-white mb-4">Volunteer</h2>
+
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="{{url_for('donate')}}" method="post" role="form">
+                            <h3 class="mb-4">Become a volunteer today</h3>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
+                                        placeholder="Jack Doe" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <input type="email" name="volunteer-email" id="volunteer-email"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                                        required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                        class="form-control" placeholder="Subject" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                        <input type="text" name="volunteer-phone" id="volunteer-phone"
+                                        class="form-control" placeholder="Phone number" required>
+                                </div>
+                            </div>
+
+                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                                placeholder="Comment (Optional)"></textarea>
+
+                            <button type="submit" class="form-control">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <section class="contact-section section-padding" id="section_6">
             <div class="container">
                 <div class="row">
